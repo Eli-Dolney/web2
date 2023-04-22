@@ -7,12 +7,21 @@
         <i class="screen-icon fa-brands fa-codepen"></i>
         <div class="screen-user">
           <span class="name" data-value="Eli Dolney">Eli Dolney</span>
-          <a class="link" href="https://bit.ly/Github-Eli" target="_blank">@VirtualCereal</a>
+          <div class="icon-container">
+            <a class="link" href="https://bit.ly/Linkedin-Eli" target="_blank">
+              <font-awesome-icon :icon="['fab', 'linkedin']" class="large-icon" />
+            </a>
+            <a class="link" href="https://bit.ly/Github-Eli" target="_blank">
+              <font-awesome-icon :icon="['fab', 'github-square']" class="large-icon" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+
   
 <script>
 export default {
@@ -46,8 +55,8 @@ export default {
             clearInterval(interval);
           }
 
-          iteration += 1 / 5;
-        }, 100);
+          iteration += 1 / 3;
+        }, 50);
       };
     });
   },
@@ -67,7 +76,7 @@ export default {
 }
 
 .screen {
-    width: 250px;
+    width: 300px;
     display: flex;
     border: 3px solid rgb(var(--primary-rgb) / 80%);
     aspect-ratio: 10 / 16;
@@ -194,7 +203,7 @@ export default {
     background-position: 0% 0%;
     
     opacity: 0.6;
-    animation: pan-image 15s linear infinite;
+    animation: pan-image 12s linear infinite;
   }
 
   
@@ -218,6 +227,17 @@ export default {
     font-size: 4rem;
     text-shadow: 0px 0px 0.5rem white;
   }
+
+  .large-icon {
+  font-size: 6rem;
+}
+.icon-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
   
   .screen > .screen-content > .screen-user{
     display: flex;
