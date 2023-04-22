@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <HeaderComponent />
+    <slide-out-menu></slide-out-menu>
     <SidebarComponent />
     <main>
       <AboutComponent />
@@ -19,13 +20,14 @@ import AboutComponent from './components/AboutComponent.vue';
 import PortfolioComponent from './components/PortfolioComponent.vue';
 import ContactComponent from './components/ContactComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
-
+import SlideOutMenu from './components/SlideOutMenu.vue';
 
 
 export default {
   name: 'App',
   components: {
     HeaderComponent,
+    SlideOutMenu,
     SidebarComponent,
     AboutComponent,
     PortfolioComponent,

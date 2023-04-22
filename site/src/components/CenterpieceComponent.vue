@@ -192,7 +192,7 @@ export default {
   }
   
   .screen-1 > .screen-image {
-    background-image: url("../assets/evMoving.jpg");
+    background-image: url("../assets/smile.JPG");
     height: 100%;
     width: 100%;
     position: absolute;
@@ -204,6 +204,9 @@ export default {
     
     opacity: 0.6;
     animation: pan-image 12s linear infinite;
+
+     /* Add the red border */
+    border: 3px solid red;
   }
 
   
