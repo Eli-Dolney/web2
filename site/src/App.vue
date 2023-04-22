@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <loading-screen v-if="isLoading" />
     <HeaderComponent />
     <slide-out-menu></slide-out-menu>
     <SidebarComponent />
@@ -14,6 +15,7 @@
 
 
 <script>
+import LoadingScreen from './components/LoadingScreen.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import SidebarComponent from './components/SidebarComponent.vue';
 import AboutComponent from './components/AboutComponent.vue';
@@ -33,8 +35,20 @@ export default {
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
-  }
-}
+    LoadingScreen,
+  },
+  data() {
+    return {
+      isLoading: true,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3000); // Hide the loading screen after 3 seconds
+  },
+};
+
 </script>
 
 <style>
