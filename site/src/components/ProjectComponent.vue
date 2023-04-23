@@ -18,29 +18,38 @@
   </div>
 </template>
   
-  <script>
-  export default {
-    name: 'ProjectComponent',
-    props: {
-      project: {
-        type: Object,
-        required: true,
-      },
+<script>
+export default {
+  name: 'ProjectComponent',
+  props: {
+    project: {
+      type: Object,
+      required: true,
     },
-  };
-  </script>
+  },
+};
+</script>
   
-  <style scoped>
-    .project-content {
+<style scoped>
+.project-content {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
+  width: 100%;
+  border: 2px solid green;
+  box-sizing: border-box; /* Added box-sizing property */
 }
 
 .portfolio-project:nth-child(even) .project-content {
   flex-direction: row-reverse;
+}
+
+.portfolio-project-image-container,
+.image-text {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid blue; /* Added red border */
 }
 
 @media (max-width: 768px) {
@@ -51,5 +60,47 @@
     flex-direction: column;
   }
 }
-  </style>
-  
+
+.image-text h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.image-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.image-text h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.btn.btn-ghost {
+  background-color: transparent;
+  border: 2px solid #333;
+  color: #333;
+}
+
+.btn.btn-ghost:hover {
+  background-color: #333;
+  color: white;
+}
+</style>

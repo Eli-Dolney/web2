@@ -1,107 +1,84 @@
 <template>
-    <section id="contact">
-      <div class="section-wrapper">
-        <div class="container">
-          <h1>Contact Me</h1>
+  <section id="contact">
+    <div class="section-wrapper">
+      <div class="container">
+        <h1>Contact Me</h1>
+        <div class="cards-container">
           <!-- LinkedIn Card -->
-          <card-component :data-image="require('../assets/evMoving.jpg')">
+          <card-component :data-image="require('../assets/linked.png')">
             <template v-slot:header>
-              <h2>LinkedIn</h2>
+              <a href="https://bit.ly/Linkedin-Elie" target="_blank">
+                <h2>LinkedIn</h2>
+              </a>
             </template>
             <template v-slot:content>
-              <div class="social-icons">
-                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </div>
+              <div class="social-icons"></div>
             </template>
           </card-component>
           <!-- GitHub Card -->
-          <card-component :data-image="require('../assets/evMoving.jpg')">
+          <card-component :data-image="require('../assets/GitHub-Mark.png')">
             <template v-slot:header>
-              <h2>GitHub</h2>
+              <a href="https://bit.ly/Github-Eli" target="_blank">
+                <h2>GitHub</h2>
+              </a>
             </template>
             <template v-slot:content>
-              <div class="social-icons">
-                <a href="https://github.com/your-github-profile" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
+              <div class="social-icons"></div>
             </template>
           </card-component>
-          <!-- Twitter Card -->
-          <card-component :data-image="require('../assets/evMoving.jpg')">
+          <!-- Instagram Card -->
+          <card-component :data-image="require('../assets/Instagram.png')">
             <template v-slot:header>
-              <h2>Instagram</h2>
+              <a href="https://bit.ly/Insta-Eli" target="_blank">
+                <h2>Instagram</h2>
+              </a>
             </template>
             <template v-slot:content>
-              <div class="social-icons">
-                <a href="https://twitter.com/your-twitter-profile" target="_blank">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </div>
+              <div class="social-icons"></div>
             </template>
           </card-component>
         </div>
       </div>
-    </section>
-  </template>
-  
-  
-  
-  <script>
-  import CardComponent from "@/components/CardComponent.vue";
-  
-  export default {
-    name: "ContactComponent",
-    components: {
-      CardComponent,
-    },
-  };
-  </script>
+    </div>
+  </section>
+</template>
 
-  <style scoped>
 
+
+<script>
+import CardComponent from "@/components/CardComponent.vue";
+
+export default {
+  name: "ContactComponent",
+  components: {
+    CardComponent,
+  },
+};
+</script>
+
+<style scoped>
 .section-wrapper {
-  border: 2px solid red;
-  padding: 10px;
   width: 80%;
   margin: 0 auto;
+  background-color: darkgrey;
 }
 
-  /* Add the provided styles here */
-  p {
-    line-height: 1.5em;
-  }
-  
-  h1 + p, p + p {
-    margin-top: 10px;
-  }
-  
-  .container {
-    padding: 40px 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  /* Additional styles specific to the contact component */
-  .social-icons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-  }
-  
-  .social-icons a:hover {
-    color: #ccc;
-  }
-  
-  /* Add any other required styles here */
-  </style>
-  
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+</style>
+

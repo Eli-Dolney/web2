@@ -201,7 +201,7 @@ export default {
     background-size: 300%;
     background-position: 0% 0%;
     
-    opacity: 0.6;
+    opacity: 1;
     animation: pan-image 12s linear infinite;
 
      /* Add the red border */

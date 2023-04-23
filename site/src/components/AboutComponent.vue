@@ -31,11 +31,13 @@ export default {
 <style scoped>
 #about {
   padding: 50px 0;
+  border: 2px solid red;
 }
 
 .section-wrapper {
   width: 80%;
   margin: 0 auto;
+  border: 2px solid red
 }
 
 .about-container {
@@ -43,11 +45,13 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .about-text {
   flex: 1;
   padding-right: 50px;
+  border: 2px solid red
 }
 
 .about-image {

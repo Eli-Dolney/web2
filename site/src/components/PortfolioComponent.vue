@@ -1,11 +1,15 @@
 <!-- PortfolioComponent.vue -->
 <template>
   <!-- ... -->
-  <div class="projects-container">
-    <ProjectComponent v-for="(project, index) in projects" :key="index" :project="project" />
+  <div class="projects-wrapper">
+    <div class="projects-container">
+      <ProjectComponent v-for="(project, index) in projects" :key="index" :project="project" :isEven="index % 2 === 0" />
+    </div>
   </div>
   <!-- ... -->
 </template>
+
+
 
 <script>
 import ProjectComponent from './ProjectComponent.vue';
@@ -32,6 +36,13 @@ export default {
           image: require('@/assets/jobtracker.png'),
           codeLink: 'https://github.com/Eli-Dolney/jobtracker',
         },
+        {
+          title: 'Cool Cards',
+          description: 'jah',
+          tools: 'Python & Google sheets Api',
+          image: require('@/assets/jobtracker.png'),
+          codeLink: 'https://github.com/Eli-Dolney/cool',
+        },
         // Add more projects here
       ],
     };
@@ -39,12 +50,18 @@ export default {
 };
 </script>
 
+
   
 <style scoped>
 .section-wrapper {
   padding: 10px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+}
+.projects-wrapper {
+  max-width: 1400px; /* Or use 90% or any value that suits your preference */
+  margin: 0 auto;
+  padding: 30px 15px;
 }
 
 p {
@@ -70,16 +87,22 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px; /* Increase the gap between projects */
+  gap: 40px;
   margin-top: 20px;
+  max-width: 1400px; /* Or use 90% or any value that suits your preference */
+  margin: 0 auto;
+  padding: 30px 15px;
 }
+
+
 
 .portfolio-project {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
+  margin: 10px 0;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -134,10 +157,42 @@ p {
   color: white;
 }
 
+.image-text {
+  flex: 1;
+}
+
+.image-text h4,
 .image-text h4,
 #portfolio .image-text p:last-of-type {
   font-size: 1.2rem;
   padding: 0 0 0 20px;
   text-align: center;
+}
+
+/* Add styles to handle the alternating layout of project images and text */
+.portfolio-project:nth-child(even) .portfolio-project-image-container {
+  order: 2;
+}
+
+.portfolio-project:nth-child(even) .image-text {
+  order: 1;
+  text-align: right;
+}
+
+.portfolio-project:nth-child(odd) .image-text {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .portfolio-project:nth-child(even) .portfolio-project-image-container,
+  .portfolio-project:nth-child(odd) .portfolio-project-image-container {
+    order: 1;
+  }
+
+  .portfolio-project:nth-child(even) .image-text,
+  .portfolio-project:nth-child(odd) .image-text {
+    order: 2;
+    text-align: center;
+  }
 }
 </style>
