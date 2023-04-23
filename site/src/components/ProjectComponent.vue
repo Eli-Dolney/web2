@@ -1,6 +1,7 @@
 <!-- ProjectComponent.vue -->
 <template>
-    <div class="portfolio-project">
+  <div class="portfolio-project">
+    <div class="project-content">
       <div class="portfolio-project-image-container">
         <img :src="project.image" :alt="project.title" />
         <div class="image-links">
@@ -14,7 +15,8 @@
         <p>{{ project.tools }}</p>
       </div>
     </div>
-  </template>
+  </div>
+</template>
   
   <script>
   export default {
@@ -29,6 +31,25 @@
   </script>
   
   <style scoped>
-  /* Add the CSS styles for the .portfolio-project and related classes here */
+    .project-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.portfolio-project:nth-child(even) .project-content {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .project-content {
+    flex-direction: column;
+  }
+  .portfolio-project:nth-child(even) .project-content {
+    flex-direction: column;
+  }
+}
   </style>
   

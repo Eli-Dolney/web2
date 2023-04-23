@@ -46,25 +46,27 @@
   
   
   <style scoped>
-  .loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 1);
-    z-index: 9999;
-  }
-  
-  .scrambling-loader {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 3rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: white;
-  }
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 9999;
+}
+
+.scrambling-loader {
+  font-family: 'Source Code Pro', monospace;
+  font-size: calc(3rem + 3vw); /* Adjust the font size based on the screen size */
+  font-weight: 400;
+  text-transform: uppercase;
+  color: white;
+  text-align: center; /* Center the text */
+  width: 100%; /* Set the width to 100% of the screen */
+}
   </style>
   

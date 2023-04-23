@@ -4,17 +4,16 @@
       <div class="screen-image"></div>
       <div class="screen-overlay"></div>
       <div class="screen-content">
-        <i class="screen-icon fa-brands fa-codepen"></i>
-        <div class="screen-user">
+        <div class="name-wrapper">
           <span class="name" data-value="Eli Dolney">Eli Dolney</span>
-          <div class="icon-container">
-            <a class="link" href="https://bit.ly/Linkedin-Eli" target="_blank">
-              <font-awesome-icon :icon="['fab', 'linkedin']" class="large-icon" />
-            </a>
-            <a class="link" href="https://bit.ly/Github-Eli" target="_blank">
-              <font-awesome-icon :icon="['fab', 'github-square']" class="large-icon" />
-            </a>
-          </div>
+        </div>
+        <div class="icon-wrapper">
+          <a class="link" href="https://bit.ly/Linkedin-Eli" target="_blank">
+            <font-awesome-icon :icon="['fab', 'linkedin']" class="large-icon" />
+          </a>
+          <a class="link" href="https://bit.ly/Github-Eli" target="_blank">
+            <font-awesome-icon :icon="['fab', 'github-square']" class="large-icon" />
+          </a>
         </div>
       </div>
     </div>
@@ -140,56 +139,56 @@ export default {
   }
 
   @keyframes pan-image {
-    0% {
-      background-position: 36% 20%;
-      background-size: 130%;
-    }
-  
-    20% {
-      background-position: 30% 15%;
-      background-size: 130%;
-    }
-  
-    20.0001% { /* -- View 2 -- */
-      background-position: 45% 3%;
-      background-size: 200%;
-    }
-  
-    40% {
-      background-position: 49% 55%;
-      background-size: 200%;
-    }
-  
-    40.0001% { /* -- View 3 -- */
-      background-position: 80% 20%;
-      background-size: 250%;
-    }
-  
-    60% {
-      background-position: 84% 15%;
-      background-size: 250%;
-    }
-  
-    60.0001% { /* -- View 4 -- */
-      background-position: 0% 0%;
-      background-size: 250%;
-    }
-  
-    80% {
-      background-position: 15% 4%;
-      background-size: 250%;
-    }
-  
-    80.0001% { /* -- View 5 -- */
-      background-position: 80% 5%;
-      background-size: 250%;
-    }
-  
-    100% {
-      background-position: 72% 10%;
-      background-size: 250%;
-    }
+  0% {
+    background-position: 36% 0%;
+    background-size: 130%;
   }
+
+  20% {
+    background-position: 36% 50%;
+    background-size: 130%;
+  }
+
+  20.0001% { /* -- View 2 -- */
+    background-position: 0% 50%;
+    background-size: 130%;
+  }
+
+  40% {
+    background-position: 50% 50%;
+    background-size: 130%;
+  }
+
+  40.0001% { /* -- View 3 -- */
+    background-position: 100% 50%;
+    background-size: 130%;
+  }
+
+  60% {
+    background-position: 50% 50%;
+    background-size: 130%;
+  }
+
+  60.0001% { /* -- View 4 -- */
+    background-position: 36% 100%;
+    background-size: 130%;
+  }
+
+  80% {
+    background-position: 36% 50%;
+    background-size: 130%;
+  }
+
+  80.0001% { /* -- View 5 -- */
+    background-position: 50% 50%;
+    background-size: 250%;
+  }
+
+  100% {
+    background-position: 50% 50%;
+    background-size: 130%;
+  }
+}
   
   .screen-1 > .screen-image {
     background-image: url("../assets/smile.JPG");
@@ -325,6 +324,58 @@ export default {
       margin-bottom: 0rem;
     }
   }
+
+  .name-wrapper {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.screen-content > .name-wrapper > .name {
+  font-family: "Source Code Pro", monospace;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.name-wrapper > .name:before,
+.name-wrapper > .name:after {
+  content: "";
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.name-wrapper > .name:before {
+  top: 55%;
+  right: -1.5rem;
+}
+
+.name-wrapper > .name:after {
+  top: 45%;
+  left: -1.5rem;
+}
+
+.icon-wrapper {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.link:hover .large-icon {
+  color: var(--primary);
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
   
   </style>
   
