@@ -1,13 +1,24 @@
 <!-- PortfolioComponent.vue -->
 <template>
-  <!-- ... -->
-  <div class="projects-wrapper">
-    <div class="projects-container">
-      <ProjectComponent v-for="(project, index) in projects" :key="index" :project="project" :isEven="index % 2 === 0" />
+  <section id="portfolio">
+    <div class="section-wrapper">
+      <div class="portfolio-container">
+        <h2>Portfolio</h2>
+        <div class="projects-wrapper">
+          <div class="projects-container">
+            <ProjectComponent
+              v-for="(project, index) in projects"
+              :key="index"
+              :project="project"
+              :isEven="index % 2 === 0"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <!-- ... -->
+  </section>
 </template>
+
 
 
 
@@ -24,21 +35,21 @@ export default {
       projects: [
         {
           title: 'PostgreSQL Database',
-          description: 'First Database',
+          description: 'First Database "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
           tools: 'Python, AWS, PostgreSQL',
           image: require('@/assets/jobtracker.png'),
           codeLink: 'https://github.com/Eli-Dolney/myFirstDatabase',
         },
         {
           title: 'Job Tracker',
-          description: 'jah',
+          description: 'jah "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
           tools: 'Python & Google sheets Api',
           image: require('@/assets/jobtracker.png'),
           codeLink: 'https://github.com/Eli-Dolney/jobtracker',
         },
         {
           title: 'Cool Cards',
-          description: 'jah',
+          description: 'jah "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
           tools: 'Python & Google sheets Api',
           image: require('@/assets/jobtracker.png'),
           codeLink: 'https://github.com/Eli-Dolney/cool',
@@ -53,28 +64,29 @@ export default {
 
   
 <style scoped>
-.section-wrapper {
-  padding: 10px;
-  width: 100%;
-  margin: 0 auto;
+#portfolio {
+  padding: 50px 0;
+  background-color: #283040;
+  color: #ffffff;
+  border: 2px solid purple;
 }
+
+.section-wrapper {
+  width: 85%;
+  margin: 0 auto;
+  border: 2px solid purple;
+  background-color: #1A1E26;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .projects-wrapper {
-  max-width: 1400px; /* Or use 90% or any value that suits your preference */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 30px 15px;
-}
-
-p {
-  padding: 10px 0 75px 0;
-  margin: 0 auto;
-  max-width: 80%;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-}
-
-#portfolio {
-  text-align: center;
 }
 
 #portfolio .row {
@@ -89,12 +101,9 @@ p {
   align-items: center;
   gap: 40px;
   margin-top: 20px;
-  max-width: 1400px; /* Or use 90% or any value that suits your preference */
-  margin: 0 auto;
+  max-width: 1400px;
   padding: 30px 15px;
 }
-
-
 
 .portfolio-project {
   display: flex;
@@ -169,7 +178,6 @@ p {
   text-align: center;
 }
 
-/* Add styles to handle the alternating layout of project images and text */
 .portfolio-project:nth-child(even) .portfolio-project-image-container {
   order: 2;
 }
@@ -195,4 +203,5 @@ p {
     text-align: center;
   }
 }
+
 </style>

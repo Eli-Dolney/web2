@@ -5,38 +5,25 @@
         <h1>Contact Me</h1>
         <div class="cards-container">
           <!-- LinkedIn Card -->
-          <card-component :data-image="require('../assets/linked.png')">
-            <template v-slot:header>
-              <a href="https://bit.ly/Linkedin-Elie" target="_blank">
-                <h2>LinkedIn</h2>
-              </a>
-            </template>
+          <card-component :data-image="require('../assets/linked.png')" :data-link="'https://bit.ly/Linkedin-Eli'">
             <template v-slot:content>
               <div class="social-icons"></div>
             </template>
           </card-component>
           <!-- GitHub Card -->
-          <card-component :data-image="require('../assets/GitHub-Mark.png')">
-            <template v-slot:header>
-              <a href="https://bit.ly/Github-Eli" target="_blank">
-                <h2>GitHub</h2>
-              </a>
-            </template>
+          <card-component :data-image="require('../assets/GitHub-Mark.png')" :data-link="'https://bit.ly/Github-Eli'">
             <template v-slot:content>
               <div class="social-icons"></div>
             </template>
           </card-component>
           <!-- Instagram Card -->
-          <card-component :data-image="require('../assets/Instagram.png')">
-            <template v-slot:header>
-              <a href="https://bit.ly/Insta-Eli" target="_blank">
-                <h2>Instagram</h2>
-              </a>
-            </template>
+          <card-component :data-image="require('../assets/Instagram.png')" :data-link="'https://bit.ly/Insta-Eli'">
             <template v-slot:content>
               <div class="social-icons"></div>
             </template>
           </card-component>
+
+
         </div>
       </div>
     </div>
@@ -57,10 +44,18 @@ export default {
 </script>
 
 <style scoped>
+
+#contact{
+  padding: 50px 0;
+  background-color: #283040;
+  color: #ffffff;
+  border: 2px solid greenyellow;
+}
 .section-wrapper {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   background-color: darkgrey;
+
 }
 
 h1 {
@@ -78,6 +73,15 @@ h1 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 100%; 
+  gap: 30px; 
+}
+
+/* Add a flex-wrap style for smaller screens */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-wrap: wrap;
+  }
 }
 
 </style>

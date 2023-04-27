@@ -32,11 +32,13 @@ export default {
 #about {
   padding: 50px 0;
   border: 2px solid red;
+  background-color: #283040;
 }
 
 .section-wrapper {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
+  background-color: #1A1E26;
   border: 2px solid red
 }
 
@@ -46,12 +48,14 @@ export default {
   justify-content: space-between;
   align-items: center;
   
+  
 }
 
 .about-text {
   flex: 1;
   padding-right: 50px;
-  border: 2px solid red
+  background-color: grey;
+  border: 2px solid green
 }
 
 .about-image {
@@ -62,6 +66,7 @@ export default {
 .about-image img {
   max-width: 100%;
   border-radius: 5px;
+  
 }
 
 .profile-image {

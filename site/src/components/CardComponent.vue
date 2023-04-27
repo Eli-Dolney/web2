@@ -1,25 +1,26 @@
 <template>
-  <div
-    class="card-wrap"
-    @mousemove="handleMouseMove"
-    @mouseenter="handleMouseEnter"
-    @mouseleave="handleMouseLeave"
-    ref="card"
-  >
-    <div class="card" :style="cardStyle">
-      <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
-      <div class="card-info">
-        <slot name="header"></slot>
-        <slot name="content"></slot>
+  <a :href="dataLink" target="_blank"> <!-- Add the anchor tag here -->
+    <div
+      class="card-wrap"
+      @mousemove="handleMouseMove"
+      @mouseenter="handleMouseEnter"
+      @mouseleave="handleMouseLeave"
+      ref="card"
+    >
+      <div class="card" :style="cardStyle">
+        <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
+        <div class="card-info">
+          <slot name="content"></slot>
+        </div>
       </div>
     </div>
-  </div>
+  </a> <!-- Close the anchor tag here -->
 </template>
 
 <script>
 export default {
   name: "CardComponent",
-  props: ["dataImage"],
+  props: ["dataImage", "dataLink"], // Add 'dataLink' here
   data: () => ({
     width: 0,
     height: 0,
@@ -79,6 +80,7 @@ export default {
 </script>
 
 
+
 <style scoped>
 .card-wrap {
   position: relative;
@@ -95,7 +97,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: darkgrey;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s;
   transform-style: preserve-3d;
@@ -107,6 +109,7 @@ export default {
   height: 100%;
   background-size: cover;
   background-position: center;
+  background-color: darkgrey;
   transform: translateZ(-10px);
 }
 
@@ -136,4 +139,20 @@ export default {
 .social-icons a:hover {
   color: #ccc;
 }
+
+/* Add responsive styles for the cards */
+@media (max-width: 768px) {
+  .card-wrap {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-wrap {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 </style>
