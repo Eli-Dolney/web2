@@ -2,7 +2,7 @@
   <section id="contact">
     <div class="section-wrapper">
       <div class="container">
-        <h1>Contact Me</h1>
+        <h1 ref="header">{{ header }}</h1>
         <div class="cards-container">
           <!-- LinkedIn Card -->
           <card-component :data-image="require('../assets/linked.png')">
@@ -43,8 +43,6 @@
   </section>
 </template>
 
-
-
 <script>
 import CardComponent from "@/components/CardComponent.vue";
 
@@ -52,6 +50,55 @@ export default {
   name: "ContactComponent",
   components: {
     CardComponent,
+  },
+  data() {
+    return {
+      header: '',
+    };
+  },
+  mounted() {
+    this.header = 'Contact Me';
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const rect = this.$refs.header.getBoundingClientRect();
+      const inViewport =
+        rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+      if (inViewport) {
+        this.scrambleHeader();
+      } else {
+        this.header = 'Contact Me';
+      }
+    },
+    scrambleHeader() {
+      const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      const text = 'Contact Me';
+      let iteration = 0;
+      let interval;
+
+      interval = setInterval(() => {
+        this.header = text
+          .split('')
+          .map((letter, index) => {
+            if (index < iteration) {
+              return text[index];
+            }
+            return letters[Math.floor(Math.random() * 26)];
+          })
+          .join('');
+
+        if (iteration >= text.length) {
+          clearInterval(interval);
+        }
+
+        iteration += 1 / 3.5;
+      }, 50);
+    },
   },
 };
 </script>
