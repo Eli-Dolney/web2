@@ -28,14 +28,15 @@ header {
     url(~@/assets/background_ev_eli.JPG);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  width: 100vw; /* Set the width to 100% of the viewport width */
+  height: 100vh; /* Set the height to 100% of the viewport height */
   background-attachment: fixed;
-  display: flex; /* Add flex display */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .centerpiece-wrapper {
-  transform: translateY(-20%); /* Move the content up */
+  transform: translateY(-20%);
 }
 </style>

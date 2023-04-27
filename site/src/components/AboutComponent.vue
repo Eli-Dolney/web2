@@ -3,7 +3,7 @@
     <div class="section-wrapper">
       <div class="about-container">
         <div class="about-text">
-          <h2 ref="title">{{ title }}</h2>
+          <h2>About Me</h2>
           <p>
             Cool things are all around us, from breathtaking natural wonders to
             cutting-edge technology. Exploring new and cool things can be a fun
@@ -25,58 +25,8 @@
 <script>
 export default {
   name: "AboutComponent",
-  data() {
-    return {
-      title: '',
-    };
-  },
-  mounted() {
-    this.title = 'About Me';
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      const rect = this.$refs.title.getBoundingClientRect();
-      const inViewport =
-        rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
-
-      if (inViewport) {
-        this.scrambleTitle();
-      } else {
-        this.title = 'About Me';
-      }
-    },
-    scrambleTitle() {
-      const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-      const text = 'About Me';
-      let iteration = 0;
-      let interval;
-
-      interval = setInterval(() => {
-        this.title = text
-          .split('')
-          .map((letter, index) => {
-            if (index < iteration) {
-              return text[index];
-            }
-            return letters[Math.floor(Math.random() * 26)];
-          })
-          .join('');
-
-        if (iteration >= text.length) {
-          clearInterval(interval);
-        }
-
-        iteration += 1 / 3.5;
-      }, 50);
-    },
-  },
 };
 </script>
-
 
 <style scoped>
 #about {
@@ -87,7 +37,7 @@ export default {
 .section-wrapper {
   width: 80%;
   margin: 0 auto;
-  border: 2px solid red;
+  border: 2px solid red
 }
 
 .about-container {
@@ -95,12 +45,13 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .about-text {
   flex: 1;
   padding-right: 50px;
-  border: 2px solid red;
+  border: 2px solid red
 }
 
 .about-image {
@@ -114,9 +65,9 @@ export default {
 }
 
 .profile-image {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
+  width: 350px; /* Adjust the width as needed */
+  height: 350px; /* Adjust the height as needed */
+  object-fit: cover; /* This will ensure that the image maintains its aspect ratio while filling the dimensions */
 }
 
 h2 {

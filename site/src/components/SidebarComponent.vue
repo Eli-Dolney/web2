@@ -42,6 +42,7 @@
   nav.nav-two {
   display: flex;
   justify-content: flex-start;
+  right: 0;
 }
 
 ul {
@@ -172,5 +173,11 @@ ul {
   background: #5ebaf2;
   color: #000;
 }
+@media (max-width: 768px) {
+  nav.nav-two {
+    display: none;
+  }
+}
+
   </style>
   

@@ -13,7 +13,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
   data() {
@@ -50,7 +49,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   z-index: 1000;
-  color: white;
+  color: purple;
 }
 
 nav {
@@ -60,13 +59,16 @@ nav {
   right: 0;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   z-index: 999;
   padding: 20px 0;
+  transition: transform 0.3s ease;
+  transform: translateY(-100%);
 }
 
 nav.open {
   height: 100vh;
+  transform: translateY(0);
 }
 
 nav ul {
@@ -76,21 +78,26 @@ nav ul {
   display: flex;
   align-items: center;
   height: 100%;
+  flex-direction: column;
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 20px 0;
 }
 
 nav ul li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 nav ul li a:hover {
-  color: #cccccc;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .nav-link {
@@ -105,16 +112,6 @@ nav ul li a:hover {
   nav {
     height: 0;
     overflow: hidden;
-    transition: height 0.5s;
-    justify-content: center;
-  }
-
-  nav.open {
-    height: 100vh;
-  }
-
-  nav ul {
-    flex-direction: column;
   }
 
   nav ul li {
