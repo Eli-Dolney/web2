@@ -35,6 +35,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-items: stretch;
   padding: 40px;
   width: 100%;
   border: 2px solid green;
@@ -45,11 +46,32 @@ export default {
   flex-direction: row-reverse;
 }
 
-.portfolio-project-image-container,
+.portfolio-project-image-container {
+  flex: 1; /* Change this to 1 to make the image container take up 1/3 of the project-content */
+  padding: 20px;
+  position: relative; /* Add this to position the image inside the container */
+  overflow: hidden; /* Add this to ensure the image stays within the container */
+  min-height: 300px; /* Adjust the value as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-project-image-container img {
+  position: absolute; /* Add this to position the image */
+  top: 50%; /* Center the image vertically */
+  left: 50%; /* Center the image horizontally */
+  width: 100%; /* Add this to make the image fill the container width */
+  height: 100%; /* Add this to make the image fill the container height */
+  object-fit: cover; /* Add this to maintain the aspect ratio of the image */
+  transform: translate(-50%, -50%); /* Add this to ensure the image is centered */
+}
 .image-text {
-  flex: 1;
+  flex: 2;
   padding: 20px;
   border: 2px solid blue; /* Added red border */
+  display: flex; /* Add this to make sure the text container stretches to the same height as the image container */
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {

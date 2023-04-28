@@ -15,7 +15,15 @@
           </p>
         </div>
         <div class="about-image">
-          <img :src="require('@/assets/evMoving.jpg')" alt="Eli and Everly" class="profile-image"/>
+          <img
+            :src="require('@/assets/evMoving.jpg')"
+            alt="Eli and Everly"
+            class="profile-image"
+            data-aos="fade-up"
+            data-aos-offset="0"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out-quad"
+          />
         </div>
       </div>
     </div>

@@ -44,14 +44,14 @@ export default {
           title: 'Job Tracker',
           description: 'jah "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
           tools: 'Python & Google sheets Api',
-          image: require('@/assets/jobtracker.png'),
+          image: require('@/assets/paint.jpg'),
           codeLink: 'https://github.com/Eli-Dolney/jobtracker',
         },
         {
           title: 'Cool Cards',
           description: 'jah "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
           tools: 'Python & Google sheets Api',
-          image: require('@/assets/jobtracker.png'),
+          image: require('@/assets/cabo.jpeg'),
           codeLink: 'https://github.com/Eli-Dolney/cool',
         },
         // Add more projects here
