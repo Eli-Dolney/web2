@@ -204,8 +204,7 @@ export default {
     opacity: 1;
     animation: pan-image 12s linear infinite;
 
-     /* Add the red border */
-    border: 3px solid red;
+
   }
 
   

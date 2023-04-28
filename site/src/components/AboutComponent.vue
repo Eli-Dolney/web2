@@ -47,7 +47,7 @@ export default {
   width: 85%;
   margin: 0 auto;
   background-color: #1A1E26;
-  border: 2px solid red
+  border: 2px solid pink
 }
 
 .about-container {
@@ -56,6 +56,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   
+  width: 80%;
   
 }
 
@@ -75,12 +76,14 @@ export default {
   max-width: 100%;
   border-radius: 5px;
   
+  
 }
 
 .profile-image {
   width: 350px; /* Adjust the width as needed */
   height: 350px; /* Adjust the height as needed */
   object-fit: cover; /* This will ensure that the image maintains its aspect ratio while filling the dimensions */
+  border: 2px solid yellow
 }
 
 h2 {
@@ -101,6 +104,7 @@ p {
   .about-text {
     padding-right: 0;
     margin-bottom: 30px;
+    
   }
 
   .about-image {

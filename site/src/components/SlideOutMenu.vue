@@ -5,9 +5,18 @@
     </button>
     <nav :class="{ open: isOpen }">
       <ul>
-        <li @click="closeMenu" class="nav-link"><a href="#about">About Me</a></li>
-        <li @click="closeMenu" class="nav-link"><a href="#portfolio">Portfolio</a></li>
-        <li @click="closeMenu" class="nav-link"><a href="#contact">Contact Me</a></li>
+        <li @click="closeMenu" class="nav-link">
+          <font-awesome-icon icon="user" class="nav-icon" />
+          <a href="#about">About Me</a>
+        </li>
+        <li @click="closeMenu" class="nav-link">
+          <font-awesome-icon icon="briefcase" class="nav-icon" />
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li @click="closeMenu" class="nav-link">
+          <font-awesome-icon icon="envelope" class="nav-icon" />
+          <a href="#contact">Contact Me</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -60,6 +69,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: 999;
   padding: 20px 0;
   transition: transform 0.3s ease;
@@ -79,6 +89,7 @@ nav ul {
   align-items: center;
   height: 100%;
   flex-direction: column;
+  justify-content: center;
 }
 
 nav ul li {
@@ -92,7 +103,7 @@ nav ul li a {
   font-weight: bold;
   padding: 5px 20px;
   border-radius: 5px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 nav ul li a:hover {
@@ -104,11 +115,11 @@ nav ul li a:hover {
   display: inline;
 }
 
-@media (max-width: 767px) {
-  .nav-link {
-    display: none;
-  }
+.nav-icon {
+  margin-right: 10px;
+}
 
+@media (max-width: 767px) {
   nav {
     height: 0;
     overflow: hidden;
@@ -117,5 +128,13 @@ nav ul li a:hover {
   nav ul li {
     margin: 10px 0;
   }
+
+  .nav-link {
+    display: block;
+  }
+}
+
+nav ul li:active a {
+  transform: scale(0.95);
 }
 </style>
