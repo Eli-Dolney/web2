@@ -68,13 +68,13 @@ export default {
   padding: 50px 0;
   background-color: #283040;
   color: #ffffff;
-  border: 2px solid purple;
+  
 }
 
 .section-wrapper {
   width: 85%;
   margin: 0 auto;
-  border: 2px solid purple;
+  border: 2px solid red;
   background-color: #1A1E26;
 }
 
@@ -87,12 +87,14 @@ h2 {
   max-width: 1400px;
   margin: 0 auto;
   padding: 30px 15px;
+  
 }
 
 #portfolio .row {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .projects-container {
@@ -103,6 +105,7 @@ h2 {
   margin-top: 20px;
   max-width: 1400px;
   padding: 30px 15px;
+  
 }
 
 .portfolio-project {
@@ -112,6 +115,7 @@ h2 {
   align-items: center;
   margin: 10px 0;
   width: 100%;
+  
 }
 
 @media (max-width: 768px) {

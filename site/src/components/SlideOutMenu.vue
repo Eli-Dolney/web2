@@ -4,7 +4,36 @@
       <font-awesome-icon icon="bars" />
     </button>
     <nav :class="{ open: isOpen }">
-      <ul>
+      <div class="social-navbar">
+        <ul>
+          <li>
+            <a class="list-item" href="https://bit.ly/Github-Eli" v-tooltip="'Github'">
+              <font-awesome-icon :icon="['fab', 'github-square']" />
+            </a>
+          </li>
+          <li>
+            <a class="list-item" href="https://bit.ly/Linkedin-Eli" v-tooltip="'LinkedIn'">
+              <font-awesome-icon :icon="['fab', 'linkedin']" />
+            </a>
+          </li>
+          <li>
+            <a class="list-item" href="https://bit.ly/Insta-Eli" v-tooltip="'Instagram'">
+              <font-awesome-icon :icon="['fab', 'instagram-square']" />
+            </a>
+          </li>
+          <li>
+            <a class="list-item" href="https://bit.ly/CodeCamp-Eli" v-tooltip="'CodeCamp'">
+              <font-awesome-icon :icon="['fas', 'laptop-code']" />
+            </a>
+          </li>
+          <li>
+            <a class="list-item" href="https://bit.ly/Twitter-Eli" v-tooltip="'Twitter'">
+              <font-awesome-icon :icon="['fab', 'twitter-square']" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="main-menu">
         <li @click="closeMenu" class="nav-link">
           <font-awesome-icon icon="user" class="nav-icon" />
           <a href="#about">About Me</a>
@@ -21,6 +50,7 @@
     </nav>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -42,6 +72,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 2px red;
 }
 
 body {
@@ -136,5 +167,35 @@ nav ul li a:hover {
 
 nav ul li:active a {
   transform: scale(0.95);
+}
+
+.social-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+}
+
+.social-navbar ul {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  justify-content: center; /* Added this line */
+  flex-direction: row; /* Added this line */
+}
+.social-navbar ul li a {
+  color: #ffffff;
+  font-size: 24px;
+  transition: color 0.2s ease;
+}
+
+.social-navbar ul li a:hover {
+  color: #cccccc;
+}
+
+.main-menu {
+  margin-top: 60px;
 }
 </style>

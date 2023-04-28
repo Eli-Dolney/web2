@@ -38,7 +38,7 @@ export default {
   align-items: stretch;
   padding: 40px;
   width: 100%;
-  border: 2px solid green;
+  border: 5px solid green;
   box-sizing: border-box; /* Added box-sizing property */
 }
 
@@ -55,9 +55,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid red
 }
 
 .portfolio-project-image-container img {
+  
   position: absolute; /* Add this to position the image */
   top: 50%; /* Center the image vertically */
   left: 50%; /* Center the image horizontally */
