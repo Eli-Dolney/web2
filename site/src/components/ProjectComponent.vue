@@ -40,6 +40,7 @@ export default {
   width: 100%;
   border: 5px solid green;
   box-sizing: border-box; /* Added box-sizing property */
+  background-color: #283040;
 }
 
 .portfolio-project:nth-child(even) .project-content {

@@ -53,11 +53,14 @@ export default {
 <style scoped>
 #about {
   padding: 50px 0;
+  
+  background-color: #1A1E26;
 }
 
 .section-wrapper {
   width: 85%;
   margin: 0 auto;
+  
 }
 
 .about-container {
@@ -67,18 +70,22 @@ export default {
   padding: 40px;
   width: 100%;
   box-sizing: border-box;
-  border: 2px solid red;
+  border: 2px solid #238C6E;
+  background-color: #283040
+  
 }
 
 h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
+  color: aliceblue;
 }
 
 .about-text {
   flex: 2; /* Set the proportion of the about-text to be 2/3 */
   padding-right: 50px;
+  color: aliceblue;
 }
 
 .about-image {

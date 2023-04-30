@@ -37,13 +37,16 @@ header {
       rgba(0, 0, 0, 0.7)
     ),
     url(~@/assets/background_ev_eli.JPG);
+  
   background-size: cover;
   background-position: center;
-
+  background-color: #1A1E26;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid green;
+  
 }
 
 .centerpiece-wrapper {
@@ -52,15 +55,16 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
 }
 
 .open-modal-button {
-  background-color: #283040;
-  color: white;
+  background-color: white;
+  color: black;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 2rem;
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -76,16 +80,18 @@ header {
   left: 50%;
   width: 300px;
   margin-left: -150px;
-  background-color: white;
+  background-color: #283040;
   border-radius: 10px;
   padding: 20px;
+  font-size: 2rem;
+  color: white;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .close-modal-button {
-  background-color: #283040;
-  color: white;
+  background-color: white;
+  color: black;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;

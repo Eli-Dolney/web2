@@ -83,24 +83,24 @@ ul {
   transition: all 0.5s linear;
 }
 .list-item:hover {
-  background: #5ebaf2;
+  background: #DB2EF2;
   color: #000;
   transform: translate(0.9em, -0.9em);
   transition: all 0.25s linear;
-  box-shadow: 0 0 1.5em #5ebaf2;
+  box-shadow: 0 0 1.5em #DB2EF2;
 }
 .list-item:hover:before,
 .list-item:hover:after {
   transition: all 0.25s linear;
 }
 .list-item:hover:before {
-  background: #5ebaf2;
+  background: #DB2EF2;
   width: 1em;
   top: 0.5em;
   left: -1em;
 }
 .list-item:hover:after {
-  background: #5ebaf2;
+  background: #DB2EF2;
   width: 1em;
   bottom: -2.5em;
   left: 1em;
@@ -170,7 +170,7 @@ ul {
 }
 
 .slide-out-menu a:hover {
-  background: #5ebaf2;
+  background: #DB2EF2;
   color: #000;
 }
 @media (max-width: 768px) {

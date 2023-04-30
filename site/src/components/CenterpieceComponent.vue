@@ -54,8 +54,8 @@ export default {
             clearInterval(interval);
           }
 
-          iteration += 1 / 3;
-        }, 50);
+          iteration += 1 / 2;
+        }, 70);
       };
     });
   },

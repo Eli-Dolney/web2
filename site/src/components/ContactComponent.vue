@@ -54,13 +54,15 @@ export default {
 .section-wrapper {
   width: 85%;
   margin: 0 auto;
-  background-color: darkgrey;
+  background-color: #1A1E26;
 
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: aliceblue;
 }
 
 .container {

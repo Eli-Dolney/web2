@@ -43,6 +43,10 @@
           <a href="#portfolio">Portfolio</a>
         </li>
         <li @click="closeMenu" class="nav-link">
+          <font-awesome-icon icon="briefcase" class="nav-icon" />
+          <a href="#skills-section">Skills</a>
+        </li>
+        <li @click="closeMenu" class="nav-link">
           <font-awesome-icon icon="envelope" class="nav-icon" />
           <a href="#contact">Contact Me</a>
         </li>
@@ -89,7 +93,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   z-index: 1000;
-  color: purple;
+  color: #DB2EF2;
 }
 
 nav {

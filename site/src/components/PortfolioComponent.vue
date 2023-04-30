@@ -66,27 +66,30 @@ export default {
 <style scoped>
 #portfolio {
   padding: 50px 0;
-  background-color: #283040;
+  background-color: #1A1E26;
   color: #ffffff;
-  
+  border: 2px solid blue;
 }
 
 .section-wrapper {
   width: 85%;
   margin: 0 auto;
-  border: 2px solid red;
+  border: 2px solid ;
   background-color: #1A1E26;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: aliceblue;
 }
 
 .projects-wrapper {
   max-width: 1400px;
   margin: 0 auto;
   padding: 30px 15px;
+  border: 2px solid blue;
   
 }
 
