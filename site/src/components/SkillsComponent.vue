@@ -197,8 +197,8 @@ h3{
 .language-item img,
 .certification-item img,
 .other-item img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
   border: 2px solid blue;
 }

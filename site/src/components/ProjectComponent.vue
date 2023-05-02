@@ -36,7 +36,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   align-items: stretch;
-  padding: 40px;
+  padding: px;
   width: 100%;
   border: 5px solid green;
   box-sizing: border-box; /* Added box-sizing property */
