@@ -4,43 +4,54 @@
       <div class="container">
         <h1>Contact Me</h1>
         <div class="accordion">
-          <div class="accordion-panel">
-            <h2 id="panel1-title">
-              <button
-                class="accordion-trigger"
-                aria-expanded="true"
-                @click="toggleAccordion($event)"
-              >
-                <span class="accordion-title">LinkedIn</span>
-                <img src="../assets/linked.png" />
-              </button>
-            </h2>
+          <div class="accordion-panel" @click="toggleAccordion">
+            <div class="accordion-panel-header">
+              <h2 class="accordion-title">LinkedIn</h2>
+              <img class="panel-image" src="../assets/linked.png" />
+              <a
+                class="accordion-link-button"
+                href="https://bit.ly/Linkedin-Eli"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Profile</a>
+            </div>
           </div>
 
-          <div class="accordion-panel">
-            <h2 id="panel2-title">
-              <button
-                class="accordion-trigger"
-                aria-expanded="false"
-                @click="toggleAccordion($event)"
-              >
-                <span class="accordion-title">GitHub</span>
-                <img src="../assets/GitHub-Mark.png" />
-              </button>
-            </h2>
+          <div class="accordion-panel" @click="toggleAccordion">
+            <div class="accordion-panel-header">
+              <h2 class="accordion-title">GitHub</h2>
+              <img class="panel-image" src="../assets/GitHub-Mark.png" />
+              <a
+                class="accordion-link-button"
+                href="https://bit.ly/Github-Eli"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Profile</a>
+            </div>
           </div>
 
-          <div class="accordion-panel">
-            <h2 id="panel3-title">
-              <button
-                class="accordion-trigger"
-                aria-expanded="false"
-                @click="toggleAccordion($event)"
-              >
-                <span class="accordion-title">Instagram</span>
-                <img src="../assets/Instagram.png" />
-              </button>
-            </h2>
+          <div class="accordion-panel" @click="toggleAccordion">
+            <div class="accordion-panel-header">
+              <h2 class="accordion-title">Instagram</h2>
+              <img class="panel-image" src="../assets/Instagram.png" />
+              <a
+                class="accordion-link-button"
+                href="https://bit.ly/Insta-Eli"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Profile</a>
+            </div>
+          </div>
+
+          <div class="accordion-panel" @click="toggleAccordion">
+            <div class="accordion-panel-header">
+              <h2 class="accordion-title">Email</h2>
+              <img class="panel-image" src="../assets/Gmail.png" />
+              <a
+                class="accordion-link-button"
+                href="mailto:elid3dev@gmail.com"
+              >Send Email</a>
+            </div>
           </div>
         </div>
       </div>
@@ -57,13 +68,13 @@ export default {
       const activePanel = event.target.closest(".accordion-panel");
       if (!activePanel) return;
 
-      const buttons = activePanel.parentElement.querySelectorAll("button");
+      const panels = activePanel.parentElement.querySelectorAll(".accordion-panel");
 
-      buttons.forEach((button) => {
-        button.setAttribute("aria-expanded", false);
+      panels.forEach((panel) => {
+        panel.classList.remove("expanded");
       });
 
-      activePanel.querySelector("button").setAttribute("aria-expanded", true);
+      activePanel.classList.add("expanded");
     },
   },
 };
@@ -101,6 +112,13 @@ img {
   padding-inline: 1rem;
 }
 
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  border: solid 2px red;
+}
+
 .accordion {
   --_button-size: 3rem;
   --_panel-padding: 0.75rem;
@@ -111,17 +129,16 @@ img {
   gap: 1rem;
 
   contain: content;
-  /* added padding to prevent issue with outlines */
   padding: 0.5rem;
 
-  /* demo only */
-  margin-top: 20rem;
+  margin-top: 4rem;
+  border: solid 2px red;
 }
 
 @media (min-width: 45em) {
   .accordion {
     flex-direction: row;
-    height: 30rem;
+    height: 20rem;
   }
 }
 
@@ -129,14 +146,38 @@ img {
   margin: 0;
 }
 
+.accordion-link-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.accordion-link-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--_panel-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.accordion-link-button:hover {
+  background-color: hsl(0 0% 20%);
+}
+
 .accordion-panel {
   position: relative;
   isolation: isolate;
-  flex-basis: calc((var(--_panel-padding) * 2) + var(--_button-size));
+  flex-basis: calc((var(--_panel-padding) * 1.5) + var(--_button-size));
   overflow: hidden;
   padding: var(--_panel-padding);
   padding-right: calc(var(--_panel-padding) * 4);
-  border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 2);
+  border-radius: calc(((var(--_panel-padding) * 1.5) + var(--_button-size)) / 2);
+  border: solid 2px green;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -162,7 +203,7 @@ img {
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
-  flex-basis: clamp(15rem, 40vh, 20rem);
+  flex-basis: clamp(12rem, 30vh, 15rem);
   flex-grow: 1;
 }
 
@@ -183,25 +224,35 @@ img {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .accordion-panel:has([aria-expanded="true"]) p {
+  .accordion-panel.expanded {
+  flex-basis: clamp(12rem, 30vh, 15rem);
+  flex-grow: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-panel.expanded p {
     transition: transform 500ms 500ms, opacity 500ms 500ms;
   }
 }
 
-.accordion-panel:has([aria-expanded="true"]) p {
-  transform: translateY(0);
-  opacity: 1;
+  .accordion-panel.expanded p {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.accordion-title {
-  font-size: 1.5rem;
-  font-weight: 700;
 
+
+.accordion-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: aliceblue;
   position: relative;
   isolation: isolate;
 
   display: grid;
   align-items: center;
+  writing-mode: vertical-lr;
 }
 
 @media (max-width: 44.999em) {
@@ -240,6 +291,9 @@ img {
   background: transparent;
   border: 0;
   padding: 0;
+  border: solid 2px purple;
+  width: 20px; /* Adjust this value according to your desired icon size */
+  height: 25px;
 }
 
 .accordion-icon {
@@ -250,38 +304,46 @@ img {
   padding: 0.75rem;
   border-radius: 50%;
   z-index: 10;
+
 }
 
-  /* Updated styles for a smaller section and padding */
-  .container {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 2rem;
+.trigger-icon {
+  width: 150px; /* Adjust this value according to your desired icon size */
+  height: 150px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .trigger-icon {
+    width: 30px;
+    height: 30px;
   }
+}
 
-  .accordion {
-    /* Update the margin-top to a smaller value */
-    margin-top: 4rem;
+@media (max-width: 400px) {
+  .trigger-icon {
+    width: 25px;
+    height: 25px;
   }
+}
 
-  @media (min-width: 45em) {
-    .accordion {
-      /* Update the height to a smaller value */
-      height: 20rem;
-    }
-  }
+.accordion-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .accordion-panel {
-    /* Update the flex-basis to a smaller value */
-    flex-basis: calc((var(--_panel-padding) * 1.5) + var(--_button-size));
-    /* Update the border-radius to a smaller value */
-    border-radius: calc(((var(--_panel-padding) * 1.5) + var(--_button-size)) / 2);
-  }
+.panel-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 15px;
+}
 
-  .accordion-panel:has([aria-expanded="true"]) {
-    /* Update the flex-basis to a smaller value */
-    flex-basis: clamp(12rem, 30vh, 15rem);
-  }
-
-
+.accordion-link-button {
+  text-decoration: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
 </style>
