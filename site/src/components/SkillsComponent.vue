@@ -12,6 +12,7 @@
               </div>
             </div>
           </div>
+          <!-- 
           <div class="certifications">
             <h3>Certifications</h3>
             <div class="certification-items">
@@ -30,6 +31,7 @@
               </div>
             </div>
           </div>
+        -->
         </div>
       </div>
     </section>
@@ -51,6 +53,7 @@ export default {
         { id: 4, name: 'JavaScript', image: require('@/assets/JavaScript.png'), show: false },
         { id: 5, name: 'CSS', image: require('@/assets/css.png'), show: false },
       ],
+      /*
       certifications: [
         { id: 1, name: 'Certification 1', image: require('@/assets/html.png'), show: false },
         { id: 2, name: 'Certification 2', image: require('@/assets/vue.png'), show: false },
@@ -65,6 +68,7 @@ export default {
         { id: 4, name: 'Other Skill 4', image: require('@/assets/JavaScript.png'), show: false },
         { id: 5, name: 'Other Skill 5', image: require('@/assets/css.png'), show: false },
       ],
+      */
     };
   },
   methods: {

@@ -37,14 +37,14 @@ export default {
           title: 'PostgreSQL Database',
           description: 'First Database "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
           tools: 'Python, AWS, PostgreSQL',
-          image: require('@/assets/jobtracker.png'),
+          image: require('@/assets/paint.jpg'),
           codeLink: 'https://github.com/Eli-Dolney/myFirstDatabase',
         },
         {
           title: 'Job Tracker',
           description: 'jah "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
           tools: 'Python & Google sheets Api',
-          image: require('@/assets/paint.jpg'),
+          image: require('@/assets/jobtracker.png'),
           codeLink: 'https://github.com/Eli-Dolney/jobtracker',
         },
         {
@@ -53,6 +53,13 @@ export default {
           tools: 'Python & Google sheets Api',
           image: require('@/assets/robot.jpg'),
           codeLink: 'https://github.com/Eli-Dolney/cool',
+        },
+        {
+          title: 'Browser Organization Chrome Extension',
+          description: 'jah "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
+          tools: 'HTML, CSS, JavaScript',
+          image: require('@/assets/home.jpg'),
+          codeLink: 'https://github.com/Eli-Dolney/Workspaces',
         },
         // Add more projects here
       ],

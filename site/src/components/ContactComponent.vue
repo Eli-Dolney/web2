@@ -100,6 +100,13 @@ body {
   font-size: 1.125rem;
   line-height: 1.6;
 }
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: aliceblue;
+}
+
 
 img {
   max-width: 100%;
