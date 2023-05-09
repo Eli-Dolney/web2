@@ -77,7 +77,7 @@ export default {
 
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
   color: aliceblue;
 }

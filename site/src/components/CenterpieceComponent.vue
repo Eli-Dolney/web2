@@ -141,47 +141,47 @@ export default {
   @keyframes pan-image {
   0% {
     background-position: 36% 0%;
-    background-size: 130%;
+    background-size: 180%;
   }
 
   20% {
     background-position: 36% 50%;
-    background-size: 130%;
+    background-size: 180%;
   }
 
   20.0001% { /* -- View 2 -- */
     background-position: 0% 50%;
-    background-size: 130%;
+    background-size: 160%;
   }
 
   40% {
     background-position: 50% 50%;
-    background-size: 130%;
+    background-size: 160%;
   }
 
   40.0001% { /* -- View 3 -- */
     background-position: 100% 50%;
-    background-size: 130%;
+    background-size: 160%;
   }
 
   60% {
     background-position: 50% 50%;
-    background-size: 130%;
+    background-size: 160%;
   }
 
   60.0001% { /* -- View 4 -- */
     background-position: 36% 100%;
-    background-size: 130%;
+    background-size: 160%;
   }
 
   80% {
     background-position: 36% 50%;
-    background-size: 130%;
+    background-size: 160%;
   }
 
   80.0001% { /* -- View 5 -- */
     background-position: 50% 50%;
-    background-size: 250%;
+    background-size: 200%;
   }
 
   100% {
@@ -191,7 +191,7 @@ export default {
 }
   
   .screen-1 > .screen-image {
-    background-image: url("../assets/smile.JPG");
+    background-image: url("../assets/placeholder%20image.jpg");
     height: 100%;
     width: 100%;
     position: absolute;
@@ -231,6 +231,7 @@ export default {
 
   .large-icon {
   font-size: 6rem;
+  color: white;
 }
 .icon-container {
   display: flex;

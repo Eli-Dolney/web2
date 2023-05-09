@@ -99,19 +99,20 @@ export default {
 .skills-section {
   text-align: left;
   padding: 20px;
-  background-color: #283040;
+  background-color: #1A1E26;
+  
   border: 2px solid green;
   
 }
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
   color: aliceblue;
 }
 h3{
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
   color: aliceblue;
 }
@@ -145,7 +146,7 @@ h3{
   flex-wrap: wrap;
   margin: 0 auto;
   border: 2px solid blue;
-  background-color: #1A1E26;
+  background-color: #283040;
 }
 
 .language-item,

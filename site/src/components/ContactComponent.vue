@@ -92,19 +92,23 @@ export default {
 
 html {
   color-scheme: dark;
+ 
+
 }
 
-body {
-  margin: 0;
-  font-family: system-ui;
-  font-size: 1.125rem;
-  line-height: 1.6;
+#contact {
+  padding: 50px 0;
+  
+  background-color: #1A1E26;
 }
+
+
 h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
   color: aliceblue;
+  border: solid 2px blue;
 }
 
 
@@ -117,6 +121,7 @@ img {
   max-width: 50rem;
   margin-inline: auto;
   padding-inline: 1rem;
+  
 }
 
 .container {
@@ -124,6 +129,7 @@ img {
   margin: 0 auto;
   padding: 2rem;
   border: solid 2px red;
+  background-color: #1A1E26;
 }
 
 .accordion {
@@ -139,7 +145,8 @@ img {
   padding: 0.5rem;
 
   margin-top: 4rem;
-  border: solid 2px red;
+  border: solid 2px #3C308C;
+  background-color: #283040
 }
 
 @media (min-width: 45em) {
@@ -184,7 +191,8 @@ img {
   padding: var(--_panel-padding);
   padding-right: calc(var(--_panel-padding) * 4);
   border-radius: calc(((var(--_panel-padding) * 1.5) + var(--_button-size)) / 2);
-  border: solid 2px green;
+  border: solid 2px #3C308C;
+  background-color: #283040;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -256,7 +264,7 @@ img {
   color: aliceblue;
   position: relative;
   isolation: isolate;
-
+  border: solid 2px green;
   display: grid;
   align-items: center;
   writing-mode: vertical-lr;
@@ -338,17 +346,20 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .panel-image {
   width: 200px;
   height: 200px;
   margin: 0 15px;
+  
+  
 }
 
 .accordion-link-button {
   text-decoration: none;
-  background-color: #4caf50;
+  background-color: #3C308C;
   color: white;
   padding: 8px 15px;
   border-radius: 5px;

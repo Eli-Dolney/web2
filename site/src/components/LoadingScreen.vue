@@ -35,7 +35,7 @@
           clearInterval(interval);
           setTimeout(() => {
             this.isLoading = false; // Hide the loading screen after a 2-second pause
-          }, 5000);
+          }, 2000);
         }
   
         iteration += 1 / 3;
