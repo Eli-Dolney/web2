@@ -70,8 +70,8 @@ export default {
   padding: 40px;
   width: 100%;
   box-sizing: border-box;
-  border: 2px solid #238C6E;
-  background-color: #283040
+  box-shadow: inset 0 0 10px #DB2EF2;
+  background-color: #0D0D0D;
   
 }
 

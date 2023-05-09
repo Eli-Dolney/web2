@@ -74,8 +74,8 @@ export default {
 #portfolio {
   padding: 50px 0;
   background-color: #1A1E26;
-  color: #ffffff;
-  border: 2px solid blue;
+  
+  
 }
 
 .section-wrapper {
@@ -96,7 +96,6 @@ h2 {
   max-width: 1400px;
   margin: 0 auto;
   padding: 30px 15px;
-  border: 2px solid blue;
   
 }
 
@@ -115,7 +114,7 @@ h2 {
   margin-top: 20px;
   max-width: 1400px;
   padding: 30px 15px;
-  
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-project {

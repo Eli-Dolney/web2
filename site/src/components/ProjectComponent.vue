@@ -38,7 +38,7 @@ export default {
   align-items: stretch;
   padding: px;
   width: 100%;
-  border: 5px solid green;
+  
   box-sizing: border-box; /* Added box-sizing property */
   background-color: #283040;
 }
@@ -56,7 +56,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid red
+  
 }
 
 .portfolio-project-image-container img {
@@ -72,9 +72,10 @@ export default {
 .image-text {
   flex: 2;
   padding: 20px;
-  border: 2px solid blue; /* Added red border */
+  box-shadow: inset 0 0 10px #DB2EF2; /* Added red border */
   display: flex; /* Add this to make sure the text container stretches to the same height as the image container */
   flex-direction: column;
+  background-color: #0D0D0D;
 }
 
 @media (max-width: 768px) {

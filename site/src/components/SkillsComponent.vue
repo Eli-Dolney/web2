@@ -101,7 +101,6 @@ export default {
   padding: 20px;
   background-color: #1A1E26;
   
-  border: 2px solid green;
   
 }
 h2 {
@@ -119,7 +118,7 @@ h3{
 .skills-wrapper {
   display: flex;
   justify-content: center;
-  border: 2px solid green;
+  
 }
 
 .skills-container {
@@ -145,8 +144,9 @@ h3{
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  border: 2px solid blue;
-  background-color: #283040;
+  
+  background-color: #0D0D0D;
+  box-shadow: inset 0 0 10px #DB2EF2; 
 }
 
 .language-item,
@@ -205,7 +205,7 @@ h3{
   width: 50%;
   height: 50%;
   object-fit: cover;
-  border: 2px solid blue;
+  
 }
 @media screen and (max-width: 1200px) {
   .language-item,

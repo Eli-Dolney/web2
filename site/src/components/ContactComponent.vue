@@ -4,18 +4,17 @@
       <div class="container">
         <h1>Contact Me</h1>
         <div class="accordion">
-          <div class="accordion-panel" @click="toggleAccordion">
+
+          <div class="accordion-panel expanded" @click="toggleAccordion">
             <div class="accordion-panel-header">
-              <h2 class="accordion-title">LinkedIn</h2>
-              <img class="panel-image" src="../assets/linked.png" />
+              <h2 class="accordion-title">Email</h2>
+              <img class="panel-image" src="../assets/Gmail.png" />
               <a
                 class="accordion-link-button"
-                href="https://bit.ly/Linkedin-Eli"
-                target="_blank"
-                rel="noopener noreferrer"
-              >View Profile</a>
+                href="mailto:elid3dev@gmail.com"
+              >Send Email</a>
             </div>
-          </div>
+          </div> 
 
           <div class="accordion-panel" @click="toggleAccordion">
             <div class="accordion-panel-header">
@@ -32,6 +31,19 @@
 
           <div class="accordion-panel" @click="toggleAccordion">
             <div class="accordion-panel-header">
+              <h2 class="accordion-title">LinkedIn</h2>
+              <img class="panel-image" src="../assets/linked.png" />
+              <a
+                class="accordion-link-button"
+                href="https://bit.ly/Linkedin-Eli"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Profile</a>
+            </div>
+          </div>
+          
+          <div class="accordion-panel" @click="toggleAccordion">
+            <div class="accordion-panel-header">
               <h2 class="accordion-title">Instagram</h2>
               <img class="panel-image" src="../assets/Instagram.png" />
               <a
@@ -43,16 +55,6 @@
             </div>
           </div>
 
-          <div class="accordion-panel" @click="toggleAccordion">
-            <div class="accordion-panel-header">
-              <h2 class="accordion-title">Email</h2>
-              <img class="panel-image" src="../assets/Gmail.png" />
-              <a
-                class="accordion-link-button"
-                href="mailto:elid3dev@gmail.com"
-              >Send Email</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -108,7 +110,7 @@ h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   color: aliceblue;
-  border: solid 2px blue;
+  
 }
 
 
@@ -128,7 +130,7 @@ img {
   max-width: 80%;
   margin: 0 auto;
   padding: 2rem;
-  border: solid 2px red;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   background-color: #1A1E26;
 }
 
@@ -145,8 +147,8 @@ img {
   padding: 0.5rem;
 
   margin-top: 4rem;
-  border: solid 2px #3C308C;
-  background-color: #283040
+  
+  background-color: #1A1E26
 }
 
 @media (min-width: 45em) {
@@ -191,8 +193,9 @@ img {
   padding: var(--_panel-padding);
   padding-right: calc(var(--_panel-padding) * 4);
   border-radius: calc(((var(--_panel-padding) * 1.5) + var(--_button-size)) / 2);
-  border: solid 2px #3C308C;
-  background-color: #283040;
+  
+  background-color: #0D0D0D;
+  box-shadow: inset 0 0 10px #DB2EF2;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -261,10 +264,10 @@ img {
 .accordion-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: aliceblue;
+  color: #DB2EF2;
   position: relative;
   isolation: isolate;
-  border: solid 2px green;
+
   display: grid;
   align-items: center;
   writing-mode: vertical-lr;
@@ -306,7 +309,7 @@ img {
   background: transparent;
   border: 0;
   padding: 0;
-  border: solid 2px purple;
+  border: solid 2px yellow;
   width: 20px; /* Adjust this value according to your desired icon size */
   height: 25px;
 }
@@ -359,7 +362,7 @@ img {
 
 .accordion-link-button {
   text-decoration: none;
-  background-color: #3C308C;
+  background-color: #DB2EF2;
   color: white;
   padding: 8px 15px;
   border-radius: 5px;
