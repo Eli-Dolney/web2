@@ -101,7 +101,7 @@ html {
 #contact {
   padding: 50px 0;
   
-  background-color: #1A1E26;
+  background-color: #0D0D0D;
 }
 
 
@@ -131,7 +131,7 @@ img {
   margin: 0 auto;
   padding: 2rem;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: #1A1E26;
+  background-color: #0D0D0D;
 }
 
 .accordion {
@@ -148,7 +148,7 @@ img {
 
   margin-top: 4rem;
   
-  background-color: #1A1E26
+  background-color: #0D0D0D;
 }
 
 @media (min-width: 45em) {
@@ -193,8 +193,8 @@ img {
   padding: var(--_panel-padding);
   padding-right: calc(var(--_panel-padding) * 4);
   border-radius: calc(((var(--_panel-padding) * 1.5) + var(--_button-size)) / 2);
+  background-color: #1A1E26;
   
-  background-color: #0D0D0D;
   box-shadow: inset 0 0 10px #DB2EF2;
 }
 
@@ -264,7 +264,7 @@ img {
 .accordion-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #DB2EF2;
+  color: aliceblue;
   position: relative;
   isolation: isolate;
 

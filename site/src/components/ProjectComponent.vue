@@ -40,7 +40,7 @@ export default {
   width: 100%;
   
   box-sizing: border-box; /* Added box-sizing property */
-  background-color: #283040;
+  background-color: #0D0D0D;
 }
 
 .portfolio-project:nth-child(even) .project-content {
@@ -75,7 +75,7 @@ export default {
   box-shadow: inset 0 0 10px #DB2EF2; /* Added red border */
   display: flex; /* Add this to make sure the text container stretches to the same height as the image container */
   flex-direction: column;
-  background-color: #0D0D0D;
+  background-color: #1A1E26;
 }
 
 @media (max-width: 768px) {

@@ -100,7 +100,7 @@ export default {
   text-align: left;
   padding: 20px;
   background-color: #1A1E26;
-  
+  background-color: #0D0D0D;
   
 }
 h2 {
@@ -145,7 +145,7 @@ h3{
   flex-wrap: wrap;
   margin: 0 auto;
   
-  background-color: #0D0D0D;
+  background-color: #1A1E26;
   box-shadow: inset 0 0 10px #DB2EF2; 
 }
 

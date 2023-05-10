@@ -14,7 +14,7 @@
   
   <style scoped>
   footer {
-    background-color: #1A1E26;;
+    background-color: #0D0D0D;
     color: #fff;
     padding: 1rem;
     font-family: Arial, sans-serif;
@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 10px #DB2EF2;
   }
   </style>
   

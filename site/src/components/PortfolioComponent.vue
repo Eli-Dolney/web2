@@ -73,7 +73,8 @@ export default {
 <style scoped>
 #portfolio {
   padding: 50px 0;
-  background-color: #1A1E26;
+  
+  background-color: #0D0D0D;
   
   
 }
@@ -81,8 +82,8 @@ export default {
 .section-wrapper {
   width: 85%;
   margin: 0 auto;
-  border: 2px solid ;
-  background-color: #1A1E26;
+  
+  background-color: #0D0D0D;
 }
 
 h2 {

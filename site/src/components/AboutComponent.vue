@@ -54,7 +54,7 @@ export default {
 #about {
   padding: 50px 0;
   
-  background-color: #1A1E26;
+  background-color: #0D0D0D;
 }
 
 .section-wrapper {
@@ -72,6 +72,7 @@ export default {
   box-sizing: border-box;
   box-shadow: inset 0 0 10px #DB2EF2;
   background-color: #0D0D0D;
+  background-color: #1A1E26;
   
 }
 
