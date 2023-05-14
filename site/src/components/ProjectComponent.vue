@@ -3,10 +3,12 @@
   <div class="portfolio-project">
     <div class="project-content">
       <div class="portfolio-project-image-container">
-        <img :src="project.image" :alt="project.title" />
-        <div class="image-links">
-          <a v-if="project.codeLink" :href="project.codeLink" class="btn btn-ghost" target="_blank">View the code!</a>
-        </div>
+        <a v-if="project.codeLink" :href="project.codeLink" class="btn btn-ghost" target="_blank">
+            <img :src="project.image" :alt="project.title" />
+            <div class="overlay">
+                <div class="text">View Code</div>
+            </div>
+        </a>
       </div>
       <div class="image-text">
         <h3>{{ project.title }}</h3>
@@ -29,6 +31,7 @@ export default {
   },
 };
 </script>
+
   
 <style scoped>
 .project-content {
@@ -90,17 +93,20 @@ export default {
 .image-text h3 {
   font-size: 1.6rem;
   margin-bottom: 10px;
+  color: aliceblue;
 }
 
 .image-text p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 10px;
+  color: aliceblue;
 }
 
 .image-text h4 {
   font-size: 1.4rem;
   margin-bottom: 10px;
+  color: aliceblue;
 }
 
 .btn {
@@ -129,4 +135,45 @@ export default {
   background-color: #333;
   color: white;
 }
+/* CSS */
+
+.portfolio-project-image-container {
+  position: relative;
+  /* Other styles... */
+}
+
+.portfolio-project-image-container img {
+  /* Other styles... */
+  transition: 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #DB2EF2;
+}
+
+.portfolio-project-image-container:hover .overlay {
+  opacity: 0.7;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 </style>

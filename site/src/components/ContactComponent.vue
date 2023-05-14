@@ -7,51 +7,29 @@
 
           <div class="accordion-panel expanded" @click="toggleAccordion">
             <div class="accordion-panel-header">
-              <h2 class="accordion-title">Email</h2>
+              <h2 class="accordion-title"><a href="mailto:elid3dev@gmail.com">Email</a></h2>
               <img class="panel-image" src="../assets/Gmail.png" />
-              <a
-                class="accordion-link-button"
-                href="mailto:elid3dev@gmail.com"
-              >Send Email</a>
-            </div>
-          </div> 
-
-          <div class="accordion-panel" @click="toggleAccordion">
-            <div class="accordion-panel-header">
-              <h2 class="accordion-title">GitHub</h2>
-              <img class="panel-image" src="../assets/GitHub-Mark.png" />
-              <a
-                class="accordion-link-button"
-                href="https://bit.ly/Github-Eli"
-                target="_blank"
-                rel="noopener noreferrer"
-              >View Profile</a>
             </div>
           </div>
 
           <div class="accordion-panel" @click="toggleAccordion">
             <div class="accordion-panel-header">
-              <h2 class="accordion-title">LinkedIn</h2>
+              <h2 class="accordion-title"><a href="https://bit.ly/Github-Eli" target="_blank" rel="noopener noreferrer">GitHub</a></h2>
+              <img class="panel-image" src="../assets/GitHub-Mark.png" />
+            </div>
+          </div>
+
+          <div class="accordion-panel" @click="toggleAccordion">
+            <div class="accordion-panel-header">
+              <h2 class="accordion-title"><a href="https://bit.ly/Linkedin-Eli" target="_blank" rel="noopener noreferrer">LinkedIn</a></h2>
               <img class="panel-image" src="../assets/linked.png" />
-              <a
-                class="accordion-link-button"
-                href="https://bit.ly/Linkedin-Eli"
-                target="_blank"
-                rel="noopener noreferrer"
-              >View Profile</a>
             </div>
           </div>
           
           <div class="accordion-panel" @click="toggleAccordion">
             <div class="accordion-panel-header">
-              <h2 class="accordion-title">Instagram</h2>
+              <h2 class="accordion-title"><a href="https://bit.ly/Insta-Eli" target="_blank" rel="noopener noreferrer">Instagram</a></h2>
               <img class="panel-image" src="../assets/Instagram.png" />
-              <a
-                class="accordion-link-button"
-                href="https://bit.ly/Insta-Eli"
-                target="_blank"
-                rel="noopener noreferrer"
-              >View Profile</a>
             </div>
           </div>
 
@@ -60,6 +38,7 @@
     </div>
   </section>
 </template>
+
 
 
 <script>
@@ -367,4 +346,41 @@ img {
   padding: 8px 15px;
   border-radius: 5px;
 }
+@media (max-width: 600px) {
+  .accordion {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .accordion-panel {
+    flex-basis: auto;
+    padding: 1rem;
+    padding-right: 1rem;
+  }
+
+  .accordion-panel-header {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .accordion-title {
+    font-size: 1.5rem;
+    writing-mode: horizontal-tb;
+    margin-bottom: 10px;
+  }
+
+ 
+
+  .accordion-link-button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  .panel-image {
+    display: none;
+  }
+}
+
 </style>

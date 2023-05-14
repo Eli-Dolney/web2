@@ -48,13 +48,6 @@ export default {
           codeLink: 'https://github.com/Eli-Dolney/jobtracker',
         },
         {
-          title: 'Cool Cards',
-          description: 'jah "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
-          tools: 'Python & Google sheets Api',
-          image: require('@/assets/robot.jpg'),
-          codeLink: 'https://github.com/Eli-Dolney/cool',
-        },
-        {
           title: 'Browser Organization Chrome Extension',
           description: 'jah "Experience the ultimate fusion of technology and design with our cutting-edge products that push the boundaries of innovation."',
           tools: 'HTML, CSS, JavaScript',
@@ -111,7 +104,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   margin-top: 20px;
   max-width: 1400px;
   padding: 30px 15px;

@@ -126,6 +126,7 @@ h3{
   flex-direction: column;
   align-items: center;
   width: 80%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .languages,
@@ -133,6 +134,7 @@ h3{
 .other {
   width: 100%;
   margin-bottom: 20px;
+  color: aliceblue;
   
 }
 
