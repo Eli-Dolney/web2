@@ -2,7 +2,7 @@
   <header>
     <div class="centerpiece-wrapper">
       <CenterpieceComponent />
-      <button @click="open = true" class="open-modal-button">Click Me</button>
+      <button @click="open = true" class="open-modal-button">Click Me 1</button>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal">
