@@ -372,7 +372,7 @@ img {
     margin-bottom: 10px;
   }
 
- 
+
 
   .accordion-link-button {
     padding: 5px 10px;
